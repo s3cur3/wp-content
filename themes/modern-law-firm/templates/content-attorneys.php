@@ -7,7 +7,7 @@
 <?php
 
 $contentLength = 250;
-$attorneys = mlfGetAllAttorneys(100, $contentLength);
+$attorneys = ciGetAllAttorneys(100, $contentLength);
 
 ?>
 

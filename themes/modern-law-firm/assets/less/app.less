@@ -664,7 +664,16 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   /* ==========================================================================
    Base
    ========================================================================== */
-
+  .container-fluid {
+    main.col-sm-8 .pad > * {
+      max-width: (690px+@grid-gutter-width);
+      margin-right: 0;
+    }
+    .sidebar.col-sm-4 {
+      max-width: 390px;
+      margin-left: 0;
+    }
+  }
 
   /* ==========================================================================
      Header

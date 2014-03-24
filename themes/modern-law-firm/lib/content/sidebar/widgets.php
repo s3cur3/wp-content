@@ -26,7 +26,6 @@ function roots_widgets_init() {
 
     // Widgets
     register_widget( 'Roots_Vcard_Widget' );
-    register_widget( 'MLFPracticeAreasWidget' );
 }
 add_action( 'widgets_init', 'roots_widgets_init' );
 

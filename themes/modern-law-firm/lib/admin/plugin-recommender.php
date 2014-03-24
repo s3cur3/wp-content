@@ -71,6 +71,24 @@ function mlfRegisterRequiredPlugins() {
             'slug' 		=> 'testimonials-widget',
             'required' 	=> false,
         ),
+        array(
+            'name'               => 'Attorneys Custom Post Type Plugin', // The plugin name.
+            'slug'               => 'ci-attorneys-cpt', // The plugin slug (typically the folder name).
+            'source'             => 'https://conversioninsights.net/downloads/plugins/ci-attorneys-cpt.zip', // The plugin source.
+            'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+        ),
+        array(
+            'name'               => 'Practice Areas Custom Post Type Plugin', // The plugin name.
+            'slug'               => 'ci-practice-areas-cpt', // The plugin slug (typically the folder name).
+            'source'             => 'https://conversioninsights.net/downloads/plugins/ci-practice-areas-cpt.zip', // The plugin source.
+            'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+        ),
+        array(
+            'name'               => 'Slides Custom Post Type Plugin', // The plugin name.
+            'slug'               => 'ci-slides-cpt', // The plugin slug (typically the folder name).
+            'source'             => 'https://conversioninsights.net/downloads/plugins/ci-slides-cpt.zip', // The plugin source.
+            'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+        ),
     );
 
     // Change this to your theme text domain, used for internationalising strings
