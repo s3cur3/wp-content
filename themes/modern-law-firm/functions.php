@@ -38,10 +38,10 @@ require_once locate_template('/lib/header/favicon.php');
 require_once locate_template('/lib/header/addGoogleFonts.php');
 // Add the <style> tags to set font-families
 require_once locate_template('/lib/appearance/googleFontsStyles.php');
+// Tools for setting up the full-width layout
+require_once locate_template('/lib/appearance/fullWidthLayout.php');
 // Breadcrumbs in the page headers
 require_once locate_template('/lib/header/breadbrumbs.php');
-// Custom post type framework
-require_once locate_template('/lib/content/cptFramework.php');
 // Boilerplate Google Privacy Policy
 require_once locate_template('/lib/content/google-privacy-policy.php');
 // Custom [gallery] modifications
@@ -72,6 +72,8 @@ require_once locate_template('/lib/content/sidebar/social.php');
 // Print credits for the theme
 require_once locate_template('/lib/content/footer/credit.php');
 /* DEPRECATED: Post types are now created by plugins.
+// Custom post type framework
+require_once locate_template('/lib/content/cptFramework.php');
 // Create slides post type
 require_once locate_template('/lib/content/slider.php');
 // Create attorneys post type
@@ -102,7 +104,7 @@ require_once locate_template('/lib/content/featured-image-attribution/featured-i
 require_once 'lib/theme/theme-updates/theme-update-checker.php';
 $example_update_checker = new ThemeUpdateChecker(
     MLF_SLUG,
-    'http://conversioninsights.net/downloads/themes/mlf_version_metadata.json'
+    'http://conversioninsights.net/downloads/themes/mlf-premium_version_metadata.json'
 );
 
 

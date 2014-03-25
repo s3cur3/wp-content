@@ -83,6 +83,14 @@ if( of_get_option('mlf_demo_site', false) ) { ?>
                 <option value="normal">Normal page</option>
             </select>
         </div>
+        <h4>Choose a background</h4>
+        <div class="input">
+            <select id="background" name="background">
+                <option value="white">Solid white</option>
+                <option value="pattern">Subtle pattern</option>
+                <option value="image">Full-screen image</option>
+            </select>
+        </div>
         <h4>Choose a color scheme</h4>
         <ul class="no-bullet"> <?php
             $colorPath = get_template_directory_uri() . '/assets/img/colors/';

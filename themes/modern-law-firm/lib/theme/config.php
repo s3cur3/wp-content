@@ -8,8 +8,8 @@ add_theme_support( 'bootstrap-gallery' ); // Enable Bootstrap's thumbnails compo
 add_theme_support( 'nice-search' ); // Enable /?s= to /search/ redirect
 add_theme_support( 'jquery-cdn' ); // Enable to load jQuery from the Google CDN
 add_theme_support( 'automatic-feed-links' ); // Enable RSS feed links in the header
-add_theme_support( 'custom-header' ); // Image in header
-add_theme_support( 'custom-background' ); // Background image
+//add_theme_support( 'custom-header' ); // Image in header
+//add_theme_support( 'custom-background' ); // Background image
 
 /**
  * Configuration values

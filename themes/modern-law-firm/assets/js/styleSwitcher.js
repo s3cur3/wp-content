@@ -28,7 +28,7 @@
                 $('a').each(function() {
                     var href = $(this).attr('href');
 
-                    if( href && !$(this).hasClass('no-color-link') ) {
+                    if( href && !$(this).hasClass('no-color-link') && !(href.indexOf('#') > -1) ) {
                         href = href.replace(/\?.*/, '');
 
                         href += (href.match(/\?/) ? '&' : '?') + queryString;
@@ -44,7 +44,7 @@
 
 
         var layoutSelect = $('#layout');
-        if( $('div.wrap').hasClass('container-fluid') ) {
+        if( $('div.wrap').hasClass('container-fluid') || $('div.wrap').hasClass('pseudo-fluid') ) {
             layoutSelect.val('full');
         } else {
             layoutSelect.val('normal');
@@ -56,14 +56,21 @@
             if( $(this).val() == 'normal' ) {
                 wrap.addClass('container');
                 wrap.removeClass('container-fluid');
+                wrap.removeClass('pseudo-fluid');
             } else {
                 wrap.addClass('container-fluid');
+                wrap.addClass('pseudo-fluid');
                 wrap.removeClass('container');
             }
             resizeNoPad();
 
             setAllLinks(null, $(this).val());
         });
+
+
+
+        var bgSelect = $('#background');
+
 
     });
 })(jQuery);

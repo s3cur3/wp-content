@@ -9,7 +9,7 @@ find templates -name '.*' -type f -delete
 
 grunt
 
-ZIP="modern-law-firm.zip"
+ZIP="modern-law-firm-premium.zip"
 echo "\n\n\nNuking existing ZIP"
 rm ${ZIP}
 DIRECTORY="modern-law-firm-premium"

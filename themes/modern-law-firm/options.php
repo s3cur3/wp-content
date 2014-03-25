@@ -75,6 +75,33 @@ function optionsframework_options() {
         'type' => 'heading');
 
     $options[] = array(
+        'name' => __('Firm Logo', MLF_TEXT_DOMAIN),
+        'desc' => __('By default, we use the <a href="./options-general.php">site title</a> as the "logo." To use an image instead, set it here.<br /> Recommended size: 300x37.', MLF_TEXT_DOMAIN),
+        'id' => 'firm_logo',
+        'type' => 'upload');
+
+
+    $options[] = array(
+        'name' => __('SVG version of logo', MLF_TEXT_DOMAIN),
+        'desc' => __('If you choose to use an SVG version of the logo, the bitmap (above) will be used as a fallback.', MLF_TEXT_DOMAIN),
+        'id' => 'svg_logo',
+        'type' => 'upload');
+    $options[] = array(
+        'name' => __('Width to display SVG', MLF_TEXT_DOMAIN),
+        'desc' => __('(in pixels)&mdash;should be the same as the bitmap version\'s width', MLF_TEXT_DOMAIN),
+        'id' => 'svg_logo_width',
+        'std' => '',
+        'class' => 'mini',
+        'type' => 'text');
+    $options[] = array(
+        'name' => __('Height to display SVG', MLF_TEXT_DOMAIN),
+        'desc' => __('(in pixels)&mdash;should be the same as the bitmap version\'s height', MLF_TEXT_DOMAIN),
+        'id' => 'svg_logo_height',
+        'std' => '',
+        'class' => 'mini',
+        'type' => 'text');
+
+    $options[] = array(
         'name' => __('Additional "menu" text', MLF_TEXT_DOMAIN),
         'desc' => __('This will appear to the far right of the navigation menu. Example: Call us at (123) 456-7890', MLF_TEXT_DOMAIN),
         'id' => 'additional_menu_text',
@@ -198,32 +225,6 @@ function optionsframework_options() {
         )
     );
 
-    $options[] = array(
-        'name' => __('Firm Logo', MLF_TEXT_DOMAIN),
-        'desc' => __('By default, we use the <a href="./options-general.php">site title</a> as the "logo." To use an image instead, set it here.<br /> Recommended size: 300x37.', MLF_TEXT_DOMAIN),
-        'id' => 'firm_logo',
-        'type' => 'upload');
-
-
-    $options[] = array(
-        'name' => __('SVG version of logo', MLF_TEXT_DOMAIN),
-        'desc' => __('If you choose to use an SVG version of the logo, the bitmap (above) will be used as a fallback.', MLF_TEXT_DOMAIN),
-        'id' => 'svg_logo',
-        'type' => 'upload');
-    $options[] = array(
-        'name' => __('Width to display SVG', MLF_TEXT_DOMAIN),
-        'desc' => __('(in pixels)&mdash;should be the same as the bitmap version\'s width', MLF_TEXT_DOMAIN),
-        'id' => 'svg_logo_width',
-        'std' => '',
-        'class' => 'mini',
-        'type' => 'text');
-    $options[] = array(
-        'name' => __('Height to display SVG', MLF_TEXT_DOMAIN),
-        'desc' => __('(in pixels)&mdash;should be the same as the bitmap version\'s height', MLF_TEXT_DOMAIN),
-        'id' => 'svg_logo_height',
-        'std' => '',
-        'class' => 'mini',
-        'type' => 'text');
 
     $options[] = array(
         'name' => __('Full-screen background image', MLF_TEXT_DOMAIN),

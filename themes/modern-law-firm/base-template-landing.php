@@ -28,7 +28,7 @@ get_template_part( 'templates/head' );
         }
     ?>
 
-    <div class="wrap container" role="document">
+    <div class="wrap <?php echo ciGetContainerClass(); ?>" role="document">
         <div class="content row">
             <main class="main <?php echo roots_main_class(); ?> col-sm-8" role="main">
                 <div class="pad">

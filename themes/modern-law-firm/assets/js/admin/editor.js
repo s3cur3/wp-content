@@ -27,19 +27,36 @@
 
             editor.addCommand('columns', function () {
                 var numCols = parseInt( prompt("How many columns do you want? ", "3") );
-                if( numCols >= 2 && numCols <= 12 ) {
+
+                var bootstrapColumnClasses = [
+                    "", // Zero columns doesn't make sense
+                    "col-sm-12", // 1 col
+                    "col-sm-6",  // 2 col
+                    "col-sm-4",  // 3 col
+                    "col-sm-3",
+                    "",          // 5 columns can't happen in a 12-col grid
+                    "col-sm-2",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "col-sm-1"
+                ];
+
+                if( bootstrapColumnClasses[numCols] ) {
                     var output = '<div class="row-fluid">';
                     numCols = parseInt(numCols);
                     var colWidth = 12 / numCols;
                     for( var i = 1; i <= numCols; i++ ) {
-                        output += '<div class="col-sm-' + colWidth + ' mb20 mt20"><p>Type column ' + + i + ' content here</p></div>';
+                        output += '<div class="' + bootstrapColumnClasses[numCols] + ' mb20 mt20"><p>Type column ' + + i + ' content here</p></div>';
                     }
 
                     output += "</div><div class=\"clr\"></div>";
                     editor.execCommand('mceInsertContent', 0, output);
                 }
                 else {
-                    editor.execCommand('mceInsertContent', 0, "That number of columns is invalid. Please enter a number between 2 and 12.");
+                    editor.execCommand('mceInsertContent', 0, "That number of columns is invalid. Please enter a number between 1, 2, 3, 4, 6, or 12.");
                 }
             });
 

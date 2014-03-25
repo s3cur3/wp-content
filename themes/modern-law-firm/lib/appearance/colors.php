@@ -234,10 +234,7 @@ function mlfPrintCustomColorStyling() {
     $backgroundImg = of_get_option("full_screen_image_bg");
     $backgroundPattern = of_get_option("pattern_bg");
 
-    if( of_get_option('full_width_container') || (isset($_GET['layout']) && $_GET['layout'] == "full" ) ) {
-        $backgroundImg = false;
-        $backgroundPattern = false;
-    }
+    //$useFullWidthContainer = of_get_option('full_width_container') || (isset($_GET['layout']) && $_GET['layout'] == "full" );
 ?>
     <!-- From colors.php -->
     <style>
