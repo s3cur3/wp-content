@@ -91,6 +91,7 @@ main .pad img {
   font-size: 1.6em;
   font-weight: 700;
   padding-top: 24px;
+  min-height: 72px;
 }
 
 .navbar-nav>li>a {
@@ -231,9 +232,23 @@ h1 .btn, h2 .btn, h3 .btn, h4 .btn {
     font-size: 2em;
   }
 }
+.carousel.inpage {
+  margin-left: -45px;
+  margin-right: -45px;
+}
+.carousel.right {
+}
 @media (min-width: @screen-md-min) {
   .col-md-8 .carousel.full-width {
     max-width: 622px;
+  }
+  .carousel.right {
+    margin-right: -45px;
+    margin-left: 0;
+  }
+  .carousel.left {
+    margin-left: -45px;
+    margin-right: 0;
   }
 }
 @media (min-width: @screen-lg-min) {
@@ -325,11 +340,11 @@ h1, .navbar-brand {
   opacity: 0.8;
 }
 
-.container main {
-  background: #fff;
-}
 .pseudo-fluid main {
   background: transparent;
+}
+.container main {
+  background: #fff;
 }
 
 /* Gallery Shortcode */

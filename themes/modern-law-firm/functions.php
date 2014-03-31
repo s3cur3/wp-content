@@ -36,6 +36,8 @@ require_once locate_template('/lib/header/nav.php');
 require_once locate_template('/lib/header/favicon.php');
 // Load custom Google Fonts
 require_once locate_template('/lib/header/addGoogleFonts.php');
+// Add the custom CSS to the page <head>
+require_once locate_template('/lib/appearance/customCSS.php');
 // Add the <style> tags to set font-families
 require_once locate_template('/lib/appearance/googleFontsStyles.php');
 // Tools for setting up the full-width layout

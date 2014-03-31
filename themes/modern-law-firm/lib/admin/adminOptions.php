@@ -231,27 +231,27 @@ function mlfRegisterMetaBoxes( $meta_boxes ) {
         'fields' => array(
             // Caption position
             array(
-                'name' => __( 'Position of caption:', 'rwmb' ),
+                'name' => __( 'Position of caption:', MLF_TEXT_DOMAIN ),
                 'id' => "{$prefix}caption_position",
                 'type' => 'select',
                 // Array of 'value' => 'Label' pairs for select box
                 'options' => array(
-                    'center' => __( 'Center', 'rwmb' ),
-                    'left' => __( 'Left', 'rwmb' ),
-                    'right' => __( 'Right', 'rwmb' ),
-                    'none' => __( 'Not displayed', 'rwmb' ),
+                    'center' => __( 'Center', MLF_TEXT_DOMAIN ),
+                    'left' => __( 'Left', MLF_TEXT_DOMAIN ),
+                    'right' => __( 'Right', MLF_TEXT_DOMAIN ),
+                    'none' => __( 'Not displayed', MLF_TEXT_DOMAIN ),
                 ),
                 // Select multiple values, optional. Default is false.
                 'multiple' => false,
                 'std' => 'center',
-                'desc' => '<strong>Note:</strong> On very small screens, all captions will be centered, with a transparent background.'
+                'desc' => __('<strong>Note:</strong> On very small screens, all captions will be centered, with a transparent background.', MLF_TEXT_DOMAIN )
             ),
             // Caption background color
             array(
-                'name' => __( 'Caption background color', 'rwmb' ),
+                'name' => __( 'Caption background color', MLF_TEXT_DOMAIN ),
                 'id' => "{$prefix}caption_bg",
                 'type' => 'color',
-                'desc' => '<strong>Only</strong> applies to left- or right-positioned captions. Defaults to the secondary background color.'
+                'desc' => __('<strong>Only</strong> applies to left- or right-positioned captions. Defaults to the secondary background color.', MLF_TEXT_DOMAIN )
             ),
         ),
     );

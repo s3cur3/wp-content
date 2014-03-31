@@ -78,6 +78,22 @@ function getAttorneySocialURLs($postID=null) {
     return $arr;
 }
 
+/**
+ * @param $arrayOfSocialURLs
+ */
+function attorneySocialURLsAreEmpty($arrayOfSocialURLs) {
+    $empty = true;
+    if( is_array($arrayOfSocialURLs) && count($arrayOfSocialURLs) > 0 ) {
+        foreach( $arrayOfSocialURLs as $key => $val ) {
+            if( $val ) {
+                $empty = false;
+                break;
+            }
+        }
+    }
+    return $empty;
+}
+
 
 /**
  * @param array $urlArray The array spit out by getAttorneySocialURLs()

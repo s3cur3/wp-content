@@ -268,6 +268,14 @@ function optionsframework_options() {
         'id' => 'touch_icon_precomposed',
         'std' => '0',
         'type' => 'checkbox');
+
+    $options[] = array(
+        'name' => __('Custom CSS', MLF_TEXT_DOMAIN),
+        'desc' => __('If you <em>really</em> don\'t want to create a child theme, you can add custom CSS to the header here.', MLF_TEXT_DOMAIN),
+        'id' => 'custom_css',
+        'std' => '',
+        'type' => 'textarea');
+
     $options[] = array(
         'name' => __('Enable demo mode?', MLF_TEXT_DOMAIN),
         'desc' => __('If checked, we will display the theme selector on every page. You probably do not want to do this.', MLF_TEXT_DOMAIN),

@@ -22,7 +22,7 @@ $attorneys = ciGetAllAttorneys(100, $contentLength);
             <a href="<?php echo $attorney['url']; ?>" title="<?php echo $attorney['title']; ?>">
                 <img class="mb0" src="<?php echo $attorney['imgURL']; ?>" alt="<?php echo $attorney['title']; ?>" width="<?php echo $attorney['imgWidth']; ?>" height="<?php echo $attorney['imgHeight']; ?>" itemprop="image">
                 </a><?php
-                if(count($attorney['socialURLs']) > 1)
+                if( !attorneySocialURLsAreEmpty($attorney['socialURLs']) )
                     printSocialLinks( $attorney['socialURLs'], 'in-attorney-list' ); ?>
                 </div><?php
             } ?>

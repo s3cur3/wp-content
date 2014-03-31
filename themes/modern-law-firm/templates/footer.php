@@ -83,13 +83,15 @@ if( of_get_option('mlf_demo_site', false) ) { ?>
                 <option value="normal">Normal page</option>
             </select>
         </div>
-        <h4>Choose a background</h4>
-        <div class="input">
-            <select id="background" name="background">
-                <option value="white">Solid white</option>
-                <option value="pattern">Subtle pattern</option>
-                <option value="image">Full-screen image</option>
-            </select>
+        <div id="background-select-container">
+            <h4>Choose a background</h4>
+            <div class="input">
+                <select id="background" name="background">
+                    <option value="white">Solid white</option>
+                    <option value="pattern">Subtle pattern</option>
+                    <option value="image">Full-screen image</option>
+                </select>
+            </div>
         </div>
         <h4>Choose a color scheme</h4>
         <ul class="no-bullet"> <?php
@@ -112,6 +114,8 @@ if( of_get_option('mlf_demo_site', false) ) { ?>
                 echo "<li><a href=\"{$urlWithColor}\" class=\"no-color-link\"><img src=\"{$imgURL}\" alt=\"{$color}\"></a></li>";
             } ?>
         </ul>
+    </div>
+    <div id="imgPreload">
     </div>
     <?php
 }
